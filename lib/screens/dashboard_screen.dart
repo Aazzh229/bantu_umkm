@@ -81,6 +81,18 @@ class DashboardScreen extends StatelessWidget {
                         'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=600&auto=format&fit=crop',
                         'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=600&auto=format&fit=crop'
                       ],
+                      storeName: 'Ubud Rattan & Craft',
+                      storeLocation: 'Ubud, Bali',
+                      specifications: const [
+                        '- Ukuran: Diameter 20cm, Tebal 7cm',
+                        '- Bahan: Rotan Alami Pilihan',
+                        '- Tali: Kulit Sintetis Premium (110cm)',
+                        '- Lapisan Dalam: Kain Batik Random'
+                      ],
+                      similarProducts: const [
+                        'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=600&auto=format&fit=crop'
+                      ],
                     ),
                     const SizedBox(width: 16),
                     ProductCard(
@@ -99,6 +111,18 @@ class DashboardScreen extends StatelessWidget {
                         'https://images.unsplash.com/photo-1566478431376-78b4081c7c90?q=80&w=600&auto=format&fit=crop',
                         'https://images.unsplash.com/photo-1566478431189-d8e78df7905c?q=80&w=600&auto=format&fit=crop'
                       ],
+                      storeName: 'Snack Malang Sentosa',
+                      storeLocation: 'Malang, Jawa Timur',
+                      specifications: const [
+                        '- Berat Bersih: 250 gram',
+                        '- Rasa: Original Ketumbar Gurih',
+                        '- Bahan: Kedelai Pilihan & Ragi Tempe',
+                        '- Masa Simpan: 6 Bulan'
+                      ],
+                      similarProducts: const [
+                        'https://images.unsplash.com/photo-1566478431376-78b4081c7c90?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1566478431189-d8e78df7905c?q=80&w=600&auto=format&fit=crop'
+                      ],
                     ),
                     const SizedBox(width: 16),
                     ProductCard(
@@ -111,9 +135,22 @@ class DashboardScreen extends StatelessWidget {
                       rating: '4.9',
                       reviewsCount: '(88)',
                       stock: '12 Pcs',
-                      description: 'Kain Batik Tulis tradisional Cirebon dengan motif legendaris Mega Mendung. Dibuat menggunakan teknik tulis manual oleh maestro pembatik lokal, menghasilkan kualitas warna dan detail tingkat tinggi.',
+                      description: 'Kain Batik Tulis Motif Mega Mendung merupakan mahakarya dari perajin lokal Cirebon yang dikerjakan secara manual dengan teknik canting tradisional. Kain ini menggunakan bahan katun primissima kualitas ekspor yang sangat halus dan sejuk saat digunakan.',
                       images: const [
                         'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=600&auto=format&fit=crop'
+                      ],
+                      storeName: 'Batik Nusantara Official',
+                      storeLocation: 'Kota Cirebon, Jawa Barat',
+                      specifications: const [
+                        '- Ukuran: 2.25 × 1.15 meter',
+                        '- Bahan: Katun Primissima AAA',
+                        '- Proses: 100% Batik Tulis (Bukan Cap/Printing)',
+                        '- Warna: Pewarna Alam Indigosol'
+                      ],
+                      similarProducts: const [
+                        'https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop',
                         'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop',
                         'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=600&auto=format&fit=crop'
                       ],

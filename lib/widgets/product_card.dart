@@ -18,6 +18,12 @@ class ProductCard extends StatelessWidget {
   final String reviewsCount;
   final String description;
   final List<String> images;
+  
+  // New fields matching the store info
+  final String storeName;
+  final String storeLocation;
+  final List<String> specifications;
+  final List<String> similarProducts;
 
   const ProductCard({
     super.key,
@@ -33,6 +39,10 @@ class ProductCard extends StatelessWidget {
     this.reviewsCount = '(0)',
     this.description = 'Tidak ada deskripsi produk.',
     this.images = const [],
+    this.storeName = 'UMKM Mitra Official',
+    this.storeLocation = 'Indonesia',
+    this.specifications = const [],
+    this.similarProducts = const [],
   });
 
   @override
@@ -58,6 +68,10 @@ class ProductCard extends StatelessWidget {
                       'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=600&auto=format&fit=crop'
                     ],
               description: description,
+              storeName: storeName,
+              storeLocation: storeLocation,
+              specifications: specifications,
+              similarProducts: similarProducts,
             ),
           ),
         );

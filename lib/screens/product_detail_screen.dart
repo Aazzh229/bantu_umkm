@@ -15,6 +15,12 @@ class ProductDetailScreen extends StatefulWidget {
   final String stock;
   final List<String> images;
   final String description;
+  
+  // New fields matching the updated mockup
+  final String storeName;
+  final String storeLocation;
+  final List<String> specifications;
+  final List<String> similarProducts;
 
   const ProductDetailScreen({
     super.key,
@@ -29,6 +35,10 @@ class ProductDetailScreen extends StatefulWidget {
     required this.stock,
     required this.images,
     required this.description,
+    required this.storeName,
+    required this.storeLocation,
+    required this.specifications,
+    required this.similarProducts,
   });
 
   @override
@@ -292,6 +302,83 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           ),
                           const SizedBox(height: 24),
 
+                          // Store Info Card
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              border: Border.all(
+                                color: const Color(0xFFE5E7EB),
+                                width: 1,
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                // Store Logo Avatar
+                                Container(
+                                  width: 48,
+                                  height: 48,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFF0F1E36),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.spa_rounded,
+                                      color: Color(0xFFCBBD93),
+                                      size: 24,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 16),
+                                // Store Name and Location
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        widget.storeName,
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                          color: const Color(0xFF1F2937),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.location_on_outlined,
+                                            color: Color(0xFF6B7280),
+                                            size: 14,
+                                          ),
+                                          const SizedBox(width: 4),
+                                          Expanded(
+                                            child: Text(
+                                              widget.storeLocation,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 12,
+                                                color: const Color(0xFF6B7280),
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const Icon(
+                                  Icons.chevron_right_rounded,
+                                  color: Color(0xFF9CA3AF),
+                                  size: 24,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 32),
+
                           // Description Section
                           Text(
                             'Deskripsi Produk',
@@ -301,7 +388,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                               color: const Color(0xFF1F2937),
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 12),
                           Text(
                             widget.description,
                             style: GoogleFonts.poppins(
@@ -310,27 +397,96 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                               height: 1.6,
                             ),
                           ),
-                          const SizedBox(height: 16),
-
-                          // Location Detail (extra premium touch)
-                          Row(
-                            children: [
-                              const Icon(
-                                Icons.location_on,
-                                color: Color(0xFF80775C),
-                                size: 18,
+                          
+                          if (widget.specifications.isNotEmpty) ...[
+                            const SizedBox(height: 20),
+                            Text(
+                              'Spesifikasi:',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: const Color(0xFF4B5563),
                               ),
-                              const SizedBox(width: 6),
-                              Text(
-                                widget.location,
+                            ),
+                            const SizedBox(height: 8),
+                            ...widget.specifications.map((spec) => Padding(
+                              padding: const EdgeInsets.only(bottom: 6),
+                              child: Text(
+                                spec,
                                 style: GoogleFonts.poppins(
-                                  fontSize: 13,
-                                  color: const Color(0xFF6B7280),
-                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                  color: const Color(0xFF4B5563),
+                                  height: 1.4,
                                 ),
                               ),
-                            ],
-                          ),
+                            )),
+                          ],
+                          const SizedBox(height: 32),
+
+                          // Similar Products Section
+                          if (widget.similarProducts.isNotEmpty) ...[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Produk Serupa',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF1F2937),
+                                  ),
+                                ),
+                                Text(
+                                  'Lihat Semua',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF0951A5),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              clipBehavior: Clip.none,
+                              child: Row(
+                                children: widget.similarProducts.map((imgUrl) {
+                                  return Container(
+                                    margin: const EdgeInsets.only(right: 12),
+                                    width: 140,
+                                    height: 140,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(16),
+                                      child: CachedNetworkImage(
+                                        imageUrl: imgUrl,
+                                        fit: BoxFit.cover,
+                                        placeholder: (context, url) => Container(
+                                          color: const Color(0xFFCBBD93).withOpacity(0.3),
+                                          child: const Center(
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF574A24)),
+                                            ),
+                                          ),
+                                        ),
+                                        errorWidget: (context, url, error) => Container(
+                                          color: const Color(0xFFCBBD93),
+                                          child: const Center(
+                                            child: Icon(
+                                              Icons.image_outlined,
+                                              color: Color(0xFFFFFFFF),
+                                              size: 40,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
                         ],
                       ),
                     ),
