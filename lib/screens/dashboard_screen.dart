@@ -64,26 +64,59 @@ class DashboardScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 clipBehavior: Clip.none,
                 child: Row(
-                  children: const [
+                  children: [
                     ProductCard(
                       title: 'Tas Rotan Premium',
                       price: 'Rp 250.000',
+                      originalPrice: 'Rp 300.000',
+                      discount: '16%',
+                      category: 'Kerajinan',
                       location: 'Ubud, Bali',
                       rating: '4.9',
+                      reviewsCount: '(24)',
+                      stock: '8 Pcs',
+                      description: 'Tas rotan premium buatan tangan asli perajin lokal Ubud. Menggunakan bahan rotan pilihan yang kuat dan tahan lama dengan sentuhan tali kulit sintetis berkualitas.',
+                      images: const [
+                        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=600&auto=format&fit=crop'
+                      ],
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     ProductCard(
                       title: 'Keripik Tempe Renyah',
                       price: 'Rp 15.000',
+                      originalPrice: 'Rp 20.000',
+                      discount: '25%',
+                      category: 'Makanan',
                       location: 'Malang, Jatim',
                       rating: '4.8',
+                      reviewsCount: '(112)',
+                      stock: '45 Pcs',
+                      description: 'Keripik tempe super renyah dengan bumbu ketumbar khas Malang. Tanpa bahan pengawet dan dijamin higienis, sangat cocok untuk camilan keluarga Anda.',
+                      images: const [
+                        'https://images.unsplash.com/photo-1599490659213-e2b9527bb087?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1566478431376-78b4081c7c90?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1566478431189-d8e78df7905c?q=80&w=600&auto=format&fit=crop'
+                      ],
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     ProductCard(
-                      title: 'Batik Tulis Halus',
-                      price: 'Rp 450.000',
-                      location: 'Solo, Jateng',
-                      rating: '5.0',
+                      title: 'Batik Tulis Eksklusif "Mega Mendung" Cirebon',
+                      price: 'Rp 1.250.000',
+                      originalPrice: 'Rp 1.500.000',
+                      discount: '15%',
+                      category: 'Kain & Tekstil',
+                      location: 'Cirebon, Jabar',
+                      rating: '4.9',
+                      reviewsCount: '(88)',
+                      stock: '12 Pcs',
+                      description: 'Kain Batik Tulis tradisional Cirebon dengan motif legendaris Mega Mendung. Dibuat menggunakan teknik tulis manual oleh maestro pembatik lokal, menghasilkan kualitas warna dan detail tingkat tinggi.',
+                      images: const [
+                        'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=600&auto=format&fit=crop'
+                      ],
                     ),
                   ],
                 ),
@@ -112,12 +145,48 @@ class DashboardScreen extends StatelessWidget {
                 ),
                 itemCount: 4,
                 itemBuilder: (context, index) {
+                  final titles = ['Kopi Gayo Arabica', 'Sandal Kulit Garut', 'Madu Hutan Sumbawa', 'Dompet Kulit Eksotik'];
+                  final prices = ['Rp 85.000', 'Rp 175.000', 'Rp 120.000', 'Rp 210.000'];
+                  final locations = ['Aceh Tengah', 'Garut, Jabar', 'Sumbawa, NTB', 'Sidoarjo, Jatim'];
+                  final ratings = ['4.9', '4.8', '4.7', '4.9'];
+                  final stockList = ['15 Pcs', '22 Pcs', '30 Pcs', '5 Pcs'];
+                  final categories = ['Minuman', 'Pakaian', 'Kesehatan', 'Kerajinan'];
+                  final reviewCounts = ['(42)', '(68)', '(54)', '(19)'];
+                  final descriptions = [
+                    'Kopi arabika dataran tinggi Gayo yang diproses secara wet hulling untuk mengeluarkan cita rasa rempah, cokelat, dan tingkat keasaman medium.',
+                    'Sandal kulit Garut kualitas ekspor dari kulit sapi premium dengan sol karet antiselip dan jahitan sangat rapi.',
+                    'Madu murni alami yang dipanen langsung dari hutan liar Sumbawa. Kaya akan antioksidan dan nutrisi penting.',
+                    'Dompet kulit sapi asli yang dibuat oleh perajin lokal Sidoarjo dengan desain minimalis namun muat banyak kartu.'
+                  ];
+                  final imagesList = [
+                    const [
+                      'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop',
+                      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop'
+                    ],
+                    const [
+                      'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop',
+                      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop'
+                    ],
+                    const [
+                      'https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=600&auto=format&fit=crop',
+                      'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=600&auto=format&fit=crop'
+                    ],
+                    const [
+                      'https://images.unsplash.com/photo-1627124765135-56a300109ae4?q=80&w=600&auto=format&fit=crop',
+                      'https://images.unsplash.com/photo-1532634922-8fe0b757fb13?q=80&w=600&auto=format&fit=crop'
+                    ]
+                  ];
                   return ProductCard(
                     width: double.infinity,
-                    title: 'Produk Rekomendasi ${index + 1}',
-                    price: 'Rp 100.000',
-                    location: 'Jakarta',
-                    rating: '4.7',
+                    title: titles[index % 4],
+                    price: prices[index % 4],
+                    location: locations[index % 4],
+                    rating: ratings[index % 4],
+                    stock: stockList[index % 4],
+                    category: categories[index % 4],
+                    reviewsCount: reviewCounts[index % 4],
+                    description: descriptions[index % 4],
+                    images: imagesList[index % 4],
                   );
                 },
               ),
