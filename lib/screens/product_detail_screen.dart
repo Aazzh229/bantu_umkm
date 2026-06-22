@@ -47,7 +47,6 @@ class ProductDetailScreen extends StatefulWidget {
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
   final PageController _pageController = PageController();
   bool _isFavorite = false;
-  int _qty = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -323,57 +322,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           ),
                         ),
                         const SizedBox(height: 20),
-
-                        // Quantity Selector
-                        Row(
-                          children: [
-                            Text(
-                              'Jumlah:',
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0xFF1A1D2E),
-                              ),
-                            ),
-                            const Spacer(),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(14),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.06),
-                                    blurRadius: 8,
-                                    offset: const Offset(0, 2),
-                                  ),
-                                ],
-                              ),
-                              child: Row(
-                                children: [
-                                  _qtyButton(Icons.remove_rounded, () {
-                                    if (_qty > 1) setState(() => _qty--);
-                                  }),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 16),
-                                    child: Text(
-                                      '$_qty',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: const Color(0xFF1A1D2E),
-                                      ),
-                                    ),
-                                  ),
-                                  _qtyButton(Icons.add_rounded, () {
-                                    setState(() => _qty++);
-                                  }),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 24),
 
                         // ─── STORE INFO CARD ─────────────────────────────
                         Container(
@@ -736,24 +684,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
               child: Row(
                 children: [
-                  // Cart Icon Button
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      width: 52,
-                      height: 52,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF3F4F6),
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: const Icon(
-                        Icons.shopping_cart_outlined,
-                        color: Color(0xFF6366F1),
-                        size: 24,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
                   // WhatsApp / Buy Button
                   Expanded(
                     child: GestureDetector(
@@ -820,18 +750,4 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     );
   }
 
-  Widget _qtyButton(IconData icon, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 38,
-        height: 38,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF3F4F6),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Icon(icon, size: 18, color: const Color(0xFF6366F1)),
-      ),
-    );
-  }
 }

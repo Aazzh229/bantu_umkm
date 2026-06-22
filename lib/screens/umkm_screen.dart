@@ -31,8 +31,6 @@ class UmkmScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Icon(Icons.shopping_cart_outlined,
-                    color: Color(0xFF4B5563)),
               ],
             ),
             const SizedBox(height: 24),
@@ -60,7 +58,7 @@ class UmkmScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    'Dukung ekonomi kreatif dengan berbelanja\nlangsung dari tangan pengrajin dan\npengusaha lokal terverifikasi.',
+                    'Dukung ekonomi kreatif dengan produk\nlangsung dari tangan pengrajin dan\npengusaha lokal terverifikasi.',
                     style: GoogleFonts.poppins(
                       color: Colors.white.withOpacity(0.9),
                       fontSize: 12,

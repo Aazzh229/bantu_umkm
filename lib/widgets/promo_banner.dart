@@ -108,7 +108,7 @@ class PromoBanner extends StatelessWidget {
                     ],
                   ),
                   child: Text(
-                    'Belanja Sekarang →',
+                    'Eksplor Sekarang →',
                     style: GoogleFonts.poppins(
                       color: const Color(0xFF6366F1),
                       fontSize: 13,
