@@ -154,7 +154,7 @@ class ProductCard extends StatelessWidget {
                       ),
                       child: Text(
                         '-$discount',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 10,
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
@@ -203,7 +203,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     child: Text(
                       category,
-                      style: GoogleFonts.poppins(
+                      style: GoogleFonts.plusJakartaSans(
                         fontSize: 10,
                         fontWeight: FontWeight.w600,
                         color: const Color(0xFF6366F1),
@@ -215,7 +215,7 @@ class ProductCard extends StatelessWidget {
                     title,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.plusJakartaSans(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFF1A1D2E),
@@ -234,7 +234,7 @@ class ProductCard extends StatelessWidget {
                       const SizedBox(width: 3),
                       Text(
                         rating,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 11,
                           color: const Color(0xFF4B5563),
                           fontWeight: FontWeight.w600,
@@ -242,7 +242,7 @@ class ProductCard extends StatelessWidget {
                       ),
                       Text(
                         '  ·  ',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.plusJakartaSans(
                           fontSize: 11,
                           color: const Color(0xFF9CA3AF),
                         ),
@@ -257,7 +257,7 @@ class ProductCard extends StatelessWidget {
                         child: Text(
                           location,
                           overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 11,
                             color: const Color(0xFF9CA3AF),
                           ),
@@ -276,7 +276,7 @@ class ProductCard extends StatelessWidget {
                             if (originalPrice != null)
                               Text(
                                 originalPrice!,
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 10,
                                   color: const Color(0xFF9CA3AF),
                                   decoration: TextDecoration.lineThrough,
@@ -284,7 +284,7 @@ class ProductCard extends StatelessWidget {
                               ),
                             Text(
                               price,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
                                 color: const Color(0xFF6366F1),

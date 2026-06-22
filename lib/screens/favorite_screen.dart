@@ -17,22 +17,22 @@ class FavoriteScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.menu, color: Color(0xFF8B5CF6)),
+                const Icon(Icons.menu, color: Color(0xFFB45309)),
                 Text(
                   'BantuUMKM',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.plusJakartaSans(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: const Color(0xFF8B5CF6),
+                    color: const Color(0xFFB45309),
                   ),
                 ),
-                const Icon(Icons.notifications_none, color: Color(0xFF8B5CF6)),
+                const Icon(Icons.notifications_none, color: Color(0xFFB45309)),
               ],
             ),
             const SizedBox(height: 24),
             Text(
               'Favorit Saya',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: const Color(0xFF1F2937),
@@ -41,7 +41,7 @@ class FavoriteScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               'Daftar produk UMKM yang Anda sukai dan ingin dibeli nanti.',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 12,
                 color: const Color(0xFF6B7280),
               ),
@@ -52,7 +52,7 @@ class FavoriteScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF8B5CF6),
+                    color: const Color(0xFFB45309),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(Icons.grid_view_rounded,
@@ -108,7 +108,7 @@ class FavoriteScreen extends StatelessWidget {
             const SizedBox(height: 32),
             Text(
               'Rekomendasi Lainnya',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.plusJakartaSans(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF1F2937),

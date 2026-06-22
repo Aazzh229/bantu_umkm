@@ -162,7 +162,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                               ),
                               child: Text(
                                 widget.category,
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: const Color(0xFF6366F1),
@@ -187,7 +187,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                   const SizedBox(width: 4),
                                   Text(
                                     'Stok: ${widget.stock}',
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.plusJakartaSans(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xFF10B981),
@@ -203,7 +203,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         // Product Title
                         Text(
                           widget.title,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF1A1D2E),
@@ -223,7 +223,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             const SizedBox(width: 8),
                             Text(
                               widget.rating,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                                 color: const Color(0xFF1A1D2E),
@@ -232,7 +232,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             const SizedBox(width: 4),
                             Text(
                               widget.reviewsCount,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 13,
                                 color: const Color(0xFF9CA3AF),
                               ),
@@ -246,7 +246,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             const SizedBox(width: 3),
                             Text(
                               widget.location,
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.plusJakartaSans(
                                 fontSize: 12,
                                 color: const Color(0xFF6B7280),
                               ),
@@ -260,7 +260,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           padding: const EdgeInsets.all(18),
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
-                              colors: [Color(0xFF6366F1), Color(0xFF8B5CF6)],
+                              colors: [Color(0xFF6366F1), Color(0xFFB45309)],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),
@@ -282,7 +282,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                     if (widget.originalPrice != null)
                                       Text(
                                         widget.originalPrice!,
-                                        style: GoogleFonts.poppins(
+                                        style: GoogleFonts.plusJakartaSans(
                                           fontSize: 12,
                                           color: Colors.white.withOpacity(0.65),
                                           decoration:
@@ -291,7 +291,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                       ),
                                     Text(
                                       widget.price,
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 26,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
@@ -311,7 +311,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                   ),
                                   child: Text(
                                     'Hemat ${widget.discount}',
-                                    style: GoogleFonts.poppins(
+                                    style: GoogleFonts.plusJakartaSans(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
@@ -346,7 +346,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                   gradient: const LinearGradient(
                                     colors: [
                                       Color(0xFF6366F1),
-                                      Color(0xFF8B5CF6)
+                                      Color(0xFFB45309)
                                     ],
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight,
@@ -368,7 +368,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                   children: [
                                     Text(
                                       widget.storeName,
-                                      style: GoogleFonts.poppins(
+                                      style: GoogleFonts.plusJakartaSans(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
                                         color: const Color(0xFF1A1D2E),
@@ -386,7 +386,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                         Expanded(
                                           child: Text(
                                             widget.storeLocation,
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.plusJakartaSans(
                                               fontSize: 12,
                                               color: const Color(0xFF6B7280),
                                             ),
@@ -407,7 +407,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                 ),
                                 child: Text(
                                   'Kunjungi',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.plusJakartaSans(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xFF6366F1),
@@ -422,7 +422,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         // ─── DESCRIPTION ─────────────────────────────────
                         Text(
                           'Deskripsi Produk',
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: const Color(0xFF1A1D2E),
@@ -431,7 +431,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         const SizedBox(height: 10),
                         Text(
                           widget.description,
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.plusJakartaSans(
                             fontSize: 14,
                             color: const Color(0xFF6B7280),
                             height: 1.7,
@@ -442,7 +442,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           const SizedBox(height: 18),
                           Text(
                             'Spesifikasi',
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.plusJakartaSans(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
                               color: const Color(0xFF1A1D2E),
@@ -483,7 +483,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                       Expanded(
                                         child: Text(
                                           spec.replaceFirst('- ', ''),
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.plusJakartaSans(
                                             fontSize: 13,
                                             color: const Color(0xFF4B5563),
                                             height: 1.5,
@@ -506,7 +506,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             children: [
                               Text(
                                 'Produk Serupa',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                   color: const Color(0xFF1A1D2E),
@@ -514,7 +514,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                               ),
                               Text(
                                 'Lihat Semua',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.plusJakartaSans(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                   color: const Color(0xFF6366F1),
@@ -692,7 +692,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           SnackBar(
                             content: Text(
                               'Menghubungi penjual via WhatsApp...',
-                              style: GoogleFonts.poppins(fontSize: 13),
+                              style: GoogleFonts.plusJakartaSans(fontSize: 13),
                             ),
                             backgroundColor: const Color(0xFF25D366),
                             behavior: SnackBarBehavior.floating,
@@ -706,7 +706,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         height: 52,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
-                            colors: [Color(0xFF6366F1), Color(0xFF8B5CF6)],
+                            colors: [Color(0xFF6366F1), Color(0xFFB45309)],
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                           ),
@@ -730,7 +730,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             const SizedBox(width: 10),
                             Text(
                               'Hubungi via WhatsApp',
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.plusJakartaSans(
                                 color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,

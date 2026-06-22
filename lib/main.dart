@@ -21,9 +21,9 @@ class BantuUMKMApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFF8F9FA),
-        primaryColor: const Color(0xFF8B5CF6),
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF8B5CF6)),
+        primaryColor: const Color(0xFFB45309),
+        textTheme: GoogleFonts.plusJakartaSansTextTheme(Theme.of(context).textTheme),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFB45309)),
         useMaterial3: true,
       ),
       home: const RootScreen(),
