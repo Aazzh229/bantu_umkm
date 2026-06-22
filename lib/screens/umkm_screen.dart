@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../widgets/product_card.dart';
 
 class UmkmScreen extends StatelessWidget {
   const UmkmScreen({Key? key}) : super(key: key);
@@ -97,11 +98,15 @@ class UmkmScreen extends StatelessWidget {
                 children: [
                   _buildChip('Semua Kategori', true),
                   const SizedBox(width: 12),
-                  _buildChip('Kuliner', false),
+                  _buildChip('Gerabah', false),
                   const SizedBox(width: 12),
-                  _buildChip('Fashion', false),
+                  _buildChip('Patung', false),
                   const SizedBox(width: 12),
-                  _buildChip('Kerajinan', false),
+                  _buildChip('Anyaman', false),
+                  const SizedBox(width: 12),
+                  _buildChip('Dekorasi', false),
+                  const SizedBox(width: 12),
+                  _buildChip('Peralatan', false),
                 ],
               ),
             ),
@@ -112,7 +117,7 @@ class UmkmScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Direktori UMKM (128)',
+                  'Produk UMKM (128)',
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -144,63 +149,91 @@ class UmkmScreen extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.55,
+              childAspectRatio: 0.65,
               children: const [
-                UmkmCard(
-                  title: 'Sanggar Gerabah ...',
-                  desc: 'Kerajinan gerabah asli Kasongan dengan...',
-                  category: 'Kerajinan',
-                  rating: '4.8',
-                  icon: Icons.category,
-                ),
-                UmkmCard(
-                  title: 'Keramik Indah ...',
-                  desc: 'Guci dan vas bunga kualitas ekspor...',
-                  category: 'Kerajinan',
+                ProductCard(
+                  title: 'Guci Hias Keramik',
+                  price: 'Rp 250.000',
+                  location: 'Desa Kasongan, Bantul',
                   rating: '4.9',
-                  icon: Icons.brush,
+                  category: 'Gerabah',
                 ),
-                UmkmCard(
-                  title: 'Loro Blonyo Art',
-                  desc: 'Pusat patung pengantin Jawa klasik...',
-                  category: 'Seni',
-                  rating: '4.7',
-                  icon: Icons.palette,
+                ProductCard(
+                  title: 'Vas Bunga Terakota',
+                  price: 'Rp 85.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.8',
+                  category: 'Gerabah',
                 ),
-                UmkmCard(
-                  title: 'Terakota Kasongan',
-                  desc: 'Peralatan masak tanah liat tradisio...',
-                  category: 'Kerajinan',
+                ProductCard(
+                  title: 'Patung Loro Blonyo',
+                  price: 'Rp 150.000',
+                  location: 'Desa Kasongan, Bantul',
                   rating: '5.0',
-                  icon: Icons.kitchen,
+                  category: 'Patung',
                 ),
-                UmkmCard(
-                  title: 'Kendi Nusantara',
-                  desc: 'Kendi air minum alami tanpa bahan...',
-                  category: 'Kerajinan',
-                  rating: '4.6',
-                  icon: Icons.water_drop,
+                ProductCard(
+                  title: 'Celengan Tanah Liat',
+                  price: 'Rp 35.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.7',
+                  category: 'Gerabah',
                 ),
-                UmkmCard(
-                  title: 'Pot Taman Estetik',
-                  desc: 'Pot tanaman hias berbagai ukuran un...',
-                  category: 'Kerajinan',
+                ProductCard(
+                  title: 'Piring Hias Dinding',
+                  price: 'Rp 75.000',
+                  location: 'Desa Kasongan, Bantul',
                   rating: '4.8',
-                  icon: Icons.yard,
+                  category: 'Dekorasi',
                 ),
-                UmkmCard(
-                  title: 'Celengan Karakter',
-                  desc: 'Celengan tanah liat bentuk hewan da...',
-                  category: 'Kerajinan',
+                ProductCard(
+                  title: 'Lampu Hias Gerabah',
+                  price: 'Rp 120.000',
+                  location: 'Desa Kasongan, Bantul',
                   rating: '4.9',
-                  icon: Icons.pets,
+                  category: 'Dekorasi',
                 ),
-                UmkmCard(
-                  title: 'Lampu Hias Etnik',
-                  desc: 'Kap lampu gerabah dengan ukiran kha...',
-                  category: 'Kerajinan',
+                ProductCard(
+                  title: 'Pot Tanaman Ukir',
+                  price: 'Rp 95.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.7',
+                  category: 'Gerabah',
+                ),
+                ProductCard(
+                  title: 'Kendi Air Minum',
+                  price: 'Rp 45.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.6',
+                  category: 'Peralatan',
+                ),
+                ProductCard(
+                  title: 'Tudung Saji Anyaman',
+                  price: 'Rp 55.000',
+                  location: 'Desa Kasongan, Bantul',
                   rating: '4.8',
-                  icon: Icons.light,
+                  category: 'Anyaman',
+                ),
+                ProductCard(
+                  title: 'Patung Ganesha Batu',
+                  price: 'Rp 350.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '5.0',
+                  category: 'Patung',
+                ),
+                ProductCard(
+                  title: 'Asbak Unik Terakota',
+                  price: 'Rp 20.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.5',
+                  category: 'Peralatan',
+                ),
+                ProductCard(
+                  title: 'Hiasan Dinding Bambu',
+                  price: 'Rp 65.000',
+                  location: 'Desa Kasongan, Bantul',
+                  rating: '4.7',
+                  category: 'Dekorasi',
                 ),
               ],
             ),

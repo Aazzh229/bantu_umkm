@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Import semua screen yang dibutuhkan
-import 'screens/dashboard_screen.dart';
 import 'screens/umkm_screen.dart'; // Import layar UMKM
 import 'screens/favorite_screen.dart';
 import 'screens/profile_screen.dart';
@@ -42,14 +41,10 @@ class RootScreen extends StatefulWidget {
 class _RootScreenState extends State<RootScreen> {
   int _currentIndex = 0;
 
-  // PERBAIKAN: Daftar halaman sekarang pas 5 buah sesuai dengan jumlah menu navigasi
   final List<Widget> _pages = [
-    const DashboardScreen(), // Index 0: Home
-    const Center(
-        child: Text("Halaman Produk Belum Tersedia")), // Index 1: Produk
-    const UmkmScreen(), // Index 2: UMKM (Akan muncul di sini sekarang)
-    const FavoriteScreen(), // Index 3: Favorit
-    const ProfileScreen(), // Index 4: Profile (Tidak akan error lagi)
+    const UmkmScreen(), // Index 0: Home (UMKM)
+    const FavoriteScreen(), // Index 1: Favorit
+    const ProfileScreen(), // Index 2: Profile
   ];
 
   void _onItemTapped(int index) {
