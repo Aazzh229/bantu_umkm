@@ -396,6 +396,77 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             height: 1.7,
                           ),
                         ),
+                        const SizedBox(height: 28),
+
+                        // ─── PLATFORM LINKS ───────────────────────────────
+                        Text(
+                          'Temukan di Platform Lain',
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1D2E),
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Klik untuk mengunjungi toko atau akun resmi UMKM ini.',
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 12,
+                            color: const Color(0xFF9CA3AF),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        // Online Shop Row
+                        Row(
+                          children: [
+                            _buildPlatformButton(
+                              context,
+                              label: 'Shopee',
+                              bgColor: const Color(0xFFEE4D2D),
+                              icon: Icons.shopping_bag_rounded,
+                            ),
+                            const SizedBox(width: 10),
+                            _buildPlatformButton(
+                              context,
+                              label: 'Tokopedia',
+                              bgColor: const Color(0xFF03AC0E),
+                              icon: Icons.store_rounded,
+                            ),
+                            const SizedBox(width: 10),
+                            _buildPlatformButton(
+                              context,
+                              label: 'Lazada',
+                              bgColor: const Color(0xFF0F146D),
+                              icon: Icons.local_mall_rounded,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        // Sosmed Row
+                        Row(
+                          children: [
+                            _buildPlatformButton(
+                              context,
+                              label: 'TikTok',
+                              bgColor: const Color(0xFF010101),
+                              icon: Icons.music_note_rounded,
+                            ),
+                            const SizedBox(width: 10),
+                            _buildPlatformButton(
+                              context,
+                              label: 'Instagram',
+                              bgColor: const Color(0xFFE1306C),
+                              icon: Icons.camera_alt_rounded,
+                            ),
+                            const SizedBox(width: 10),
+                            _buildPlatformButton(
+                              context,
+                              label: 'Facebook',
+                              bgColor: const Color(0xFF1877F2),
+                              icon: Icons.facebook_rounded,
+                            ),
+                          ],
+                        ),
 
                         if (widget.specifications.isNotEmpty) ...[
                           const SizedBox(height: 18),
@@ -755,6 +826,64 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildPlatformButton(
+    BuildContext context, {
+    required String label,
+    required Color bgColor,
+    required IconData icon,
+  }) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                'Membuka $label...',
+                style: GoogleFonts.plusJakartaSans(fontSize: 13),
+              ),
+              backgroundColor: bgColor,
+              behavior: SnackBarBehavior.floating,
+              duration: const Duration(seconds: 2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          );
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          decoration: BoxDecoration(
+            color: bgColor,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: bgColor.withOpacity(0.3),
+                blurRadius: 8,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, color: Colors.white, size: 22),
+              const SizedBox(height: 4),
+              Text(
+                label,
+                style: GoogleFonts.plusJakartaSans(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
