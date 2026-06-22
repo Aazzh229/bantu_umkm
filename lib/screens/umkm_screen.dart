@@ -19,33 +19,13 @@ class _UmkmScreenState extends State<UmkmScreen> {
   String _selectedSort = 'Populer'; // 'A-Z', 'Z-A', 'Termurah', 'Termahal', 'Populer'
 
   final List<Map<String, dynamic>> _allProducts = [
+    // --- KULINER ---
     {
       'title': 'Gudeg Kaleng Bu Tjitro',
       'price': 45000,
       'location': 'Yogyakarta',
       'rating': 4.8,
       'category': 'Kuliner',
-    },
-    {
-      'title': 'Kain Batik Tulis Parang',
-      'price': 350000,
-      'location': 'Yogyakarta',
-      'rating': 5.0,
-      'category': 'Fashion',
-    },
-    {
-      'title': 'Lukisan Abstrak Kanvas',
-      'price': 500000,
-      'location': 'Yogyakarta',
-      'rating': 4.9,
-      'category': 'Seni',
-    },
-    {
-      'title': 'Guci Hias Kasongan',
-      'price': 150000,
-      'location': 'Bantul',
-      'rating': 4.8,
-      'category': 'Kerajinan',
     },
     {
       'title': 'Bakpia Pathok Premium',
@@ -55,39 +35,48 @@ class _UmkmScreenState extends State<UmkmScreen> {
       'category': 'Kuliner',
     },
     {
-      'title': 'Tas Rajut Tangan',
-      'price': 120000,
-      'location': 'Sleman',
-      'rating': 4.7,
-      'category': 'Fashion',
-    },
-    {
-      'title': 'Patung Kayu Loro Blonyo',
-      'price': 200000,
-      'location': 'Bantul',
-      'rating': 4.8,
-      'category': 'Seni',
-    },
-    {
-      'title': 'Jasa Fotografi Produk',
-      'price': 300000,
-      'location': 'Yogyakarta',
-      'rating': 4.9,
-      'category': 'Jasa',
-    },
-    {
-      'title': 'Tudung Saji Anyaman',
-      'price': 65000,
-      'location': 'Sleman',
-      'rating': 4.6,
-      'category': 'Kerajinan',
-    },
-    {
       'title': 'Keripik Tempe Sagu',
       'price': 15000,
       'location': 'Gunungkidul',
       'rating': 4.7,
       'category': 'Kuliner',
+    },
+    {
+      'title': 'Wedang Uwuh Instan',
+      'price': 25000,
+      'location': 'Bantul',
+      'rating': 4.8,
+      'category': 'Kuliner',
+    },
+    {
+      'title': 'Yangko Aneka Rasa',
+      'price': 20000,
+      'location': 'Kotagede',
+      'rating': 4.6,
+      'category': 'Kuliner',
+    },
+    {
+      'title': 'Sate Klatak Frozen',
+      'price': 85000,
+      'location': 'Bantul',
+      'rating': 4.9,
+      'category': 'Kuliner',
+    },
+
+    // --- FASHION ---
+    {
+      'title': 'Kain Batik Tulis Parang',
+      'price': 350000,
+      'location': 'Yogyakarta',
+      'rating': 5.0,
+      'category': 'Fashion',
+    },
+    {
+      'title': 'Tas Rajut Tangan',
+      'price': 120000,
+      'location': 'Sleman',
+      'rating': 4.7,
+      'category': 'Fashion',
     },
     {
       'title': 'Sepatu Kulit Pria',
@@ -97,10 +86,149 @@ class _UmkmScreenState extends State<UmkmScreen> {
       'category': 'Fashion',
     },
     {
+      'title': 'Kemeja Lurik Modern',
+      'price': 150000,
+      'location': 'Klaten',
+      'rating': 4.8,
+      'category': 'Fashion',
+    },
+    {
+      'title': 'Dompet Kulit Pari',
+      'price': 250000,
+      'location': 'Bantul',
+      'rating': 4.9,
+      'category': 'Fashion',
+    },
+    {
+      'title': 'Blangkon Mataraman',
+      'price': 75000,
+      'location': 'Yogyakarta',
+      'rating': 4.8,
+      'category': 'Fashion',
+    },
+
+    // --- SENI ---
+    {
+      'title': 'Lukisan Abstrak Kanvas',
+      'price': 500000,
+      'location': 'Yogyakarta',
+      'rating': 4.9,
+      'category': 'Seni',
+    },
+    {
+      'title': 'Patung Kayu Loro Blonyo',
+      'price': 200000,
+      'location': 'Bantul',
+      'rating': 4.8,
+      'category': 'Seni',
+    },
+    {
+      'title': 'Wayang Kulit Prabu Rama',
+      'price': 850000,
+      'location': 'Bantul',
+      'rating': 5.0,
+      'category': 'Seni',
+    },
+    {
+      'title': 'Topeng Batik Kayu',
+      'price': 125000,
+      'location': 'Bantul',
+      'rating': 4.7,
+      'category': 'Seni',
+    },
+    {
+      'title': 'Kaligrafi Kulit Kambing',
+      'price': 95000,
+      'location': 'Sleman',
+      'rating': 4.8,
+      'category': 'Seni',
+    },
+    {
+      'title': 'Miniatur Candi Prambanan',
+      'price': 150000,
+      'location': 'Sleman',
+      'rating': 4.9,
+      'category': 'Seni',
+    },
+
+    // --- KERAJINAN ---
+    {
+      'title': 'Guci Hias Kasongan',
+      'price': 150000,
+      'location': 'Bantul',
+      'rating': 4.8,
+      'category': 'Kerajinan',
+    },
+    {
+      'title': 'Tudung Saji Anyaman',
+      'price': 65000,
+      'location': 'Sleman',
+      'rating': 4.6,
+      'category': 'Kerajinan',
+    },
+    {
+      'title': 'Bros Perak Kotagede',
+      'price': 180000,
+      'location': 'Kotagede',
+      'rating': 4.9,
+      'category': 'Kerajinan',
+    },
+    {
+      'title': 'Lampu Gantung Bambu',
+      'price': 120000,
+      'location': 'Bantul',
+      'rating': 4.7,
+      'category': 'Kerajinan',
+    },
+    {
+      'title': 'Kotak Tisu Pelepah Pisang',
+      'price': 45000,
+      'location': 'Sleman',
+      'rating': 4.5,
+      'category': 'Kerajinan',
+    },
+    {
+      'title': 'Keranjang Anyaman Rotan',
+      'price': 85000,
+      'location': 'Gunungkidul',
+      'rating': 4.8,
+      'category': 'Kerajinan',
+    },
+
+    // --- JASA ---
+    {
+      'title': 'Jasa Fotografi Produk',
+      'price': 300000,
+      'location': 'Yogyakarta',
+      'rating': 4.9,
+      'category': 'Jasa',
+    },
+    {
       'title': 'Desain Logo UMKM',
       'price': 200000,
       'location': 'Yogyakarta',
       'rating': 5.0,
+      'category': 'Jasa',
+    },
+    {
+      'title': 'Pembuatan Website Toko',
+      'price': 850000,
+      'location': 'Sleman',
+      'rating': 4.9,
+      'category': 'Jasa',
+    },
+    {
+      'title': 'Konsultan Pajak UMKM',
+      'price': 500000,
+      'location': 'Yogyakarta',
+      'rating': 4.8,
+      'category': 'Jasa',
+    },
+    {
+      'title': 'Admin Sosmed Freelance',
+      'price': 1500000,
+      'location': 'Bantul',
+      'rating': 4.7,
       'category': 'Jasa',
     },
   ];
